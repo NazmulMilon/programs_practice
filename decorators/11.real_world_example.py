@@ -10,3 +10,5 @@ def decorator(func):
         return value
 
     return wrapper_decorator
+
+'''''
