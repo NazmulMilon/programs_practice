@@ -20,4 +20,4 @@ def parent(num):
 
 
 print(parent(1))
-print(parent(1))
+# print(parent(1))
