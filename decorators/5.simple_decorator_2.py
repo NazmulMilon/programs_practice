@@ -17,3 +17,18 @@ def say_something():
 say_something = not_during_the_night(say_something)
 
 print(say_something())
+
+
+
+
+
+
+
+
+# 6 5
+# 0 1
+# 0 2
+# 2 3
+# 3 0
+# 4 5
+# 2
