@@ -15,14 +15,6 @@ public:
     }
 };
 
-void print(Node* root)
-{
-    if(root==NULL) return;
-    print(root->leftchild);
-    //cout<<root->val<<endl;
-    print(root->rightchild);
-
-}
 
 void inorder_traverse(Node* root, string &chk)
 {
