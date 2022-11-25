@@ -1,0 +1,217 @@
+
+vjudge.net/contest/530579
+
+
+
+
+
+
+
+
+
+
+
+Ridesharing apps like Amare Loiya Jao Majhi need the passenger’s location to be able to pick up the passenger. However, If riders don’t turn off location access after completing their rides the app could potentially track and collect data around the clock on where the user is, where they go, and, sometimes, even how long they stay there. This quote addresses the problem of the ridesharing companies having access to the passenger’s location for as long as the passenger leaves their location on for. For example, if a passenger arrives at their destination and does not turn off their location, the driver potentially has all the information they need to hunt the passenger down and possibly hurt them. This problem does not change on the age of the passenger; a 16 year old girl could be tracked, and so could an elderly man. The consequences of location sharing have no mercy for who the passenger is, which is why it is important for the passenger to turn off their location as soon as they can. 
+
+
+When a passenger gets into a car arranged by a ride-sharing app, he or she automatically agrees to a number of terms and conditions. If the driver gets into an accident and the passenger is hurt, there’s no guarantee that the driver’s insurance company or the ride-sharing service will pay for damages. For example, a driver’s personal insurance company may decide that he or she was driving for profit and, for that reason, isn’t required to pay any medical bills. The passenger would then need to take the driver to court for damages, which can be a costly and time-consuming process. On the other hand, passengers can approach taxi companies directly regarding liability and other safety issues.
+
+Safety is also a concern for both drivers and passengers. A driver never knows the type of person about to get into the back seat. Likewise, a passenger only knows how reliable a driver is from the information a ride-sharing service shares about the driver on its app. 
+
+
+ In 2015, Uber suffered one such data breach that exposed the personal information of 50,000 drivers.
+
+
+3.A.
+Some common features of Stack Overflow forum:
+1. Good questions and great answers: Poeple ask uncommon questions and system check wheather the answers already exists or not. If there is no same questions exists system will approve the questions. People can happily answered others quesitons. If the answer or question is good, people can upvote, if people think questions or answer is not good the can downvote.
+2. Go deeper with long-form: From onboarding guides to subject-wise announcements, Articles keep all your critical info in one place. Easy to use. Easy to find.
+3. Search, Tags, Collections can find faster: Information isn’t helpful if you have to wait sometimes to find the results. That's why we have to make the system faster so that user can easily find their expected result so easily and faster.Tags, collections, and search capabilities bring answers to your fingertips in seconds.
+4. Dashboard: Measure adoption, engagement & knowledge reuse with our dashboard so we can see how our team is engaging with knowledge over time. We can also see our individual performances over this site. 
+5. 
+https://stackoverflow.co/teams/features/
+
+
+B. 
+some problems may occured:
+1. Memory is not Infinite and a Stack requires a contiguous Block of memory. A starting address and a continuous sequence of addresses after it. Stack overflow occurs when you have exceeded the Block reserved for it and probably now overwriting memory used for something else.
+
+
+ Even if user download a game legally, a security gap could still place users at risk. Once malware is on users machine, hackers can steal users personal information.
+
+Identity theft
+
+Cybercriminals collect personally identifiable information to build profiles on their potential victims. One of the potential dangers of online gaming with strangers is the chat function which allows you to talk with other players. Criminals can potentially use the chat function to gather sensitive information such as your name, phone number, and house address. That's why it's essential to be careful about the information you share when gaming.
+
+
+
+.
+======================================================================
+ERROR: test_all_retrieve_activity (program_activities.tests.tests_views.TestViews)
+Get all activity retrieve API
+
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/uzzal/backend/quantibly-v3-backend/program_activities/tests/tests_views.py", line 177, in test_all_retrieve_activity
+    if activity["id"] == response_obj["id"]:
+KeyError: 'id'
+
+----------------------------------------------------------------------
+Ran 3 tests in 8.003s
+
+FAILED (errors=1)
+Destroying test database for alias 'default'...
+
+
+
+
+
+
+This code run the test cases properly but the problem is after 70 or 80 times run properly, suddenly it will arise this "KeyError: 'id'" problem.
+
+
+======================================================================
+ERROR: test_all_retrieve_activity (program_activities.tests.tests_views.TestViews)
+Get all activity retrieve API
+
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/uzzal/backend/quantibly-v3-backend/program_activities/tests/tests_views.py", line 177, in test_all_retrieve_activity
+    if activity["id"] == response_obj["id"]:
+KeyError: 'id'
+
+----------------------------------------------------------------------
+Ran 3 tests in 8.003s
+
+FAILED (errors=1)
+Destroying test database for alias 'default'...
+
+
+
+
+
+======================================================================
+ERROR: test_retrieve_activity (program_activities.tests.tests_views.TestViews)
+Retrieve program activity retrieve API test
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/uzzal/backend/quantibly-v3-backend/program_activities/tests/tests_views.py", line 212, in test_retrieve_activity
+    'pk': str(response["id"])})
+KeyError: 'id'
+
+
+
+
+
+======================================================================
+ERROR: test_all_retrieve_activity (program_activities.tests.tests_views.TestViews)
+Get all activity retrieve API
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/uzzal/backend/quantibly-v3-backend/program_activities/tests/tests_views.py", line 177, in test_all_retrieve_activity
+    if activity["id"] == response_obj["id"]:
+KeyError: 'id'
+
+----------------------------------------------------------------------
+Ran 4 tests in 10.794s
+
+
+
+
+======================================================================
+ERROR: test_all_retrieve_activity (program_activities.tests.tests_views.TestViews)
+Get all activity retrieve API
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/uzzal/backend/quantibly-v3-backend/program_activities/tests/tests_views.py", line 177, in test_all_retrieve_activity
+    if activity["id"] == response_obj["id"]:
+KeyError: 'id'
+
+======================================================================
+ERROR: test_delete_activity (program_activities.tests.tests_views.TestViews)
+Delete activity API test
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/uzzal/backend/quantibly-v3-backend/program_activities/tests/tests_views.py", line 280, in test_delete_activity
+    'pk': response_dict["id"]})
+KeyError: 'id'
+
+----------------------------------------------------------------------
+
+
+
+.
+======================================================================
+ERROR: test_all_retrieve_activity (program_activities.tests.tests_views.TestViews)
+Get all activity retrieve API
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/uzzal/backend/quantibly-v3-backend/program_activities/tests/tests_views.py", line 177, in test_all_retrieve_activity
+    if activity["id"] == response_obj["id"]:
+KeyError: 'id'
+
+======================================================================
+ERROR: test_create_activity (program_activities.tests.tests_views.TestViews)
+Create activity API test
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/uzzal/backend/quantibly-v3-backend/program_activities/tests/tests_views.py", line 142, in test_create_activity
+    self.assertEqual(payload["organization"], response["organization"])
+KeyError: 'organization'
+
+----------------------------------------------------------------------
+
+
+
+
+
+Look at the following program:
+file = open ( 'words.dat' , 'w' ) 
+word = '' 
+while word != 'END' : 
+    word = raw_input ( 'Enter a word (enter END to quit): ') 
+    file.write ( word + '\n' ) 
+file.close ( )
+
+
+This is a very simple program for storing a list of words in a file. When executed it expects the user to enter some words, one per line, finishing with the word “END”. 
+What is the name of the file containing the words?                                             2
+How many words are stored in the file? 					 	 2
+Write a program to read the data file and display a numbered list of the contents, such as: 
+1: chicken 
+2: apple
+3: fox 
+4: aubergine 
+5: END 										  3
+
+ Note that “END” is always the last word displayed. This isn’t really the behaviour we want, since “END” is meant as a command, not a word. Change the program so that it no longer stores “END” in the file. 			  		5
+
+There’s still a problem: we can’t put the word “END” into the file even if we wanted to. Maybe we should use the empty string (’’) to signal the user’s desire to quit? Modify the program to use the empty string to terminate user input.											 			10
+
+11. Observer is a behavioural design pattern that allows some objects to notify other objects about changes in their state. The Observer pattern provides a way to subscribe and unsubscribe to and from these events for any object that implements a subscriber interface.
+Write a Python Program to demonstrate Observer Design Pattern, explain your code in writing.											15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+https://www.aitude.com/supervised-vs-unsupervised-vs-reinforcement/
+supervised- data are leveled
+unsuprevised- 
+reinforcement-
+
