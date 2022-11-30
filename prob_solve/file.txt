@@ -198,6 +198,11 @@ Write a Python Program to demonstrate Observer Design Pattern, explain your code
 
 
 
+Count =  23
+Count2 =  1
+Activity =  {'details': 'Activity with this name already exists in same activity date!'} 
+
+Response Obj=  {'id': '00888f1a-cc1f-4dda-a1ae-35adba24dfc6', 'organization': '86b52293-75ff-4cec-aa23-bd1260019b0a', 'active': True, 'is_default': True, 'activity_type': {'id': '9a5e3c6a-cc0c-4826-aa4e-575d6d788bb5', 'active': True, 'name': 'John Vaughan', 'is_default': True, 'is_checked': True, 'created_by': None, 'updated_by': None, 'organization': '86b52293-75ff-4cec-aa23-bd1260019b0a'}, 'activity_date': '1985-07-19', 'title': 'Strategy despite successful program. National few seem collection.\nHold anyone beyond coach write. Pattern site today decide look. Push firm computer represent oil history process.', 'topic': 'Difference edge international drop. Save medical four thousand.', 'program': {'id': 'd821f0f9-a28a-4429-b0de-e4da57f0e8aa', 'created_at': '2022-11-30T05:20:26.719161Z', 'updated_at': '2022-11-30T05:20:26.719201Z', 'active': True, 'title': 'Strategy despite successful program. National few seem collection.\nHold anyone beyond coach write. Pattern site today decide look. Push firm computer represent oil history process.', 'mission': 'Would can will business budget most do. World he president do matter statement only.', 'type': 2687, 'start_date': None, 'end_date': None, 'created_by': None, 'updated_by': None, 'organization': '86b52293-75ff-4cec-aa23-bd1260019b0a', 'parent': None}, 'publication_media': '3bf8b0d0-7fd4-4d47-b907-380633464e53', 'reporter_or_contact': 'Place recently information born moment buy a. Find man let sister this receive. Compare wear act friend serve if.\nCitizen shake future year. Suggest fast hair. History water letter.', 'contact_type': 'a3a241f2-d1f2-4c31-9a81-1dd6b880e240', 'location': {'id': '60a47b08-da0f-447e-9eae-e91ce0e9668b', 'city': {'id': '2456f626-d4fe-4b34-a559-f19f156ea1d1', 'active': True, 'name': 'Kenneth Wilson', 'created_by': None, 'updated_by': None}, 'state': {'id': 'eff7d57b-c67b-432d-a39e-0da79468d5a6', 'active': True, 'name': 'Mr. Mark Thomas', 'created_by': None, 'updated_by': None}, 'zip': {'id': '34444604-e264-4a68-86bd-86759e447599', 'active': True, 'name': 'Paige Berg', 'created_by': None, 'updated_by': None}, 'country': {'id': '021ee7f0-1cfa-497c-9a5a-468a15f0d59f', 'active': True, 'sort_name': 'abc', 'name': 'Mark Brown', 'phone_code': 2278, 'created_by': None, 'updated_by': None}, 'active': True, 'name': 'Brenda Jennings', 'address_line_1': None, 'address_line_2': None, 'contact_number': '2278', 'days_open': [], 'work_time_from': None, 'work_time_to': None, 'address': '19874 Wilson Bypass\nNew Julieton, KS 40666', 'is_primary': False, 'created_by': None, 'updated_by': None}, 'language': '4a42d2b5-8b0b-435d-b14f-37c66a2db145', 'total_number_of_attendees': 6003, 'outcome_of_the_outreach': '0caea3e3-5b60-48fb-8ae5-8bd918b6dc37', 'activity_cost': '43.42', 'notes': 'Lawyer stage similar financial reason debate behavior. Early plan soon improve. Wonder other do pull first fly.\nWay stage contain base. Would open practice concern thought enough. Air son machine.', 'link': 'https://vincent.com/', 'result': 'Artist certainly place couple. Measure pull woman name compare wind character. Future wear interview before be option least.', 'funding': '3ee82ea9-be6b-4a69-bea9-c82ca817480f', 'funding_source': None, 'purpose': 'Lawyer discussion star card development soldier. Value city despite industry. Former final participant staff others past wrong. Practice production while network find to.', 'subject': 'Stage work agreement quality foot democratic court. Investment cost that without information wide world.', 'activity_stuffs': [], 'target_audiences': []}
 
 
 
@@ -206,6 +211,44 @@ Write a Python Program to demonstrate Observer Design Pattern, explain your code
 
 
 
+
+======================================================================
+ERROR: test_create_activity (program_activities.tests.tests_views.TestViews)
+Create activity API test
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/uzzal/backend/quantibly-v3-backend/program_activities/tests/tests_views.py", line 149, in test_create_activity
+    self.assertEqual(payload["organization"], response["organization"])
+KeyError: 'organization'
+
+======================================================================
+ERROR: test_delete_activity (program_activities.tests.tests_views.TestViews)
+Delete activity API test
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/uzzal/backend/quantibly-v3-backend/program_activities/tests/tests_views.py", line 295, in test_delete_activity
+    'pk': response_dict["id"]})
+KeyError: 'id'
+
+======================================================================
+ERROR: test_retrieve_activity (program_activities.tests.tests_views.TestViews)
+Retrieve program activity retrieve API test
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/uzzal/backend/quantibly-v3-backend/program_activities/tests/tests_views.py", line 226, in test_retrieve_activity
+    'pk': str(response_dict["id"])})
+KeyError: 'id'
+
+======================================================================
+ERROR: test_update_activity (program_activities.tests.tests_views.TestViews)
+Update activity API test
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/uzzal/backend/quantibly-v3-backend/program_activities/tests/tests_views.py", line 260, in test_update_activity
+    'pk': response_dict["id"]})
+KeyError: 'id'
+
+------------------------------------------------------
 
 
 
