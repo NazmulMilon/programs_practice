@@ -1,0 +1,275 @@
+# # https://www.c-sharpcorner.com/article/observer-design-pattern-exaple-with-python-sample/
+# # https://www.youtube.com/watch?v=oNalXg67XEE
+# # https://www.protechtraining.com/blog/post/tutorial-the-observer-pattern-in-python-879
+# from abc import ABC, abstractmethod
+#
+#
+# class PenSubject(ABC):
+#
+#     @abstractmethod
+#     def add(self, shop):
+#         pass
+#
+#     @abstractmethod
+#     def remove(self, shop):
+#         pass
+#
+#     @abstractmethod
+#     def notify(self):
+#         pass
+#
+#
+# # from subject import PenSubject
+#
+#
+# class Pen(PenSubject):
+#
+#     def __init__(self, prize):
+#         self._penPrize = prize
+#
+#     shops = []
+#
+#     def add(self, shop):
+#         self.shops.append(shop)
+#
+#     def remove(self, shop):
+#         self.shops.append(shop)
+#
+#     def notify(self):
+#         for shop in self.shops:
+#             shop.update(self)
+#         print('---------------------------------------')
+#
+#     @property
+#     def penPrize(self):
+#         return self._penPrize
+#
+#     @penPrize.setter
+#     def penPrize(self, prize):
+#         self._penPrize = prize
+#         self.notify()
+#
+#
+# # from abc import ABC, abstractmethod
+# class ShopObserver(ABC):
+#
+#     @abstractmethod
+#     def update(self, pen):
+#         pass
+#
+#
+# #
+# # from observer import ShopObserver
+# # from ConcreteSubject import Pen
+#
+#
+# class Shop(ShopObserver):
+#
+#     def __init__(self, shopName):
+#         self._shopName = shopName
+#
+#     def update(self, pen):
+#         print("pen prize changed to ", pen.penPrize, ' in ', self._shopName)
+#
+#
+# # from ConcreteObserver import Shop
+# # from ConcreteSubject import Pen
+#
+# pen = Pen(10)
+# pen.add(Shop('Shop1'))
+# pen.add(Shop('Shop2'))
+# pen.add(Shop('Shop3'))
+#
+# pen.penPrize = 15
+# pen.penPrize = 20
+# pen.penPrize = 32
+
+
+# https://hub.packtpub.com/python-design-patterns-depth-observer-pattern/
+# class Publisher:
+#     def __init__(self):
+#         self.observers = []
+#
+#     def add(self, observer):
+#         if observer not in self.observers:
+#             self.observers.append(observer)
+#         else:
+#             print('Failed to add: {}'.format(observer))
+#
+#     def remove(self, observer):
+#         try:
+#             self.observers.remove(observer)
+#         except ValueError:
+#             print('Failed to remove: {}'.format(observer))
+#
+#     def notify(self):
+#         [o.notify(self) for o in self.observers]
+#
+#
+# class DefaultFormatter(Publisher):
+#     def __init__(self, name):
+#         Publisher.__init__(self)
+#         self.name = name
+#         self._data = 0
+#
+#     def __str__(self):
+#         return "{}: '{}' has data = {}".format(type(self).__name__, self.name, self._data)
+#
+#     @property
+#     def data(self):
+#         return self._data
+#
+#     @data.setter
+#     def data(self, new_value):
+#         try:
+#             self._data = int(new_value)
+#         except ValueError as e:
+#             print('Error: {}'.format(e))
+#         else:
+#             self.notify()
+#
+#
+# class HexFormatter:
+#     def notify(self, publisher):
+#         print("{}: '{}' has now hex data = {}".format(type(self).__name__, publisher.name, hex(publisher.data)))
+#
+#
+# class BinaryFormatter:
+#     def notify(self, publisher):
+#         print("{}: '{}' has now bin data = {}".format(type(self).__name__, publisher.name, bin(publisher.data)))
+#
+#
+# def main():
+#     df = DefaultFormatter('test1')
+#     print(df)
+#
+#     print()
+#     hf = HexFormatter()
+#     df.add(hf)
+#     df.data = 3
+#     print(df)
+#
+#     print()
+#     bf = BinaryFormatter()
+#     df.add(bf)
+#     df.data = 21
+#     print(df)
+#
+#     print()
+#     df.remove(hf)
+#     df.data = 40
+#     print(df)
+#
+#     print()
+#     df.remove(hf)
+#     df.add(bf)
+#
+#     df.data = 'hello'
+#     print(df)
+#
+#     print()
+#     df.data = 15.8
+#     print(df)
+#
+#
+# if __name__ == '__main__':
+#     main()
+
+
+# https://www.geeksforgeeks.org/observer-method-python-design-patterns/
+class Subject:
+    """Represents what is being observed"""
+
+    def __init__(self):
+
+        """create an empty observer list"""
+
+        self._observers = []
+
+    def notify(self, modifier=None):
+
+        """Alert the observers"""
+
+        for observer in self._observers:
+            if modifier != observer:
+                observer.update(self)
+
+    def attach(self, observer):
+
+        """If the observer is not in the list,
+        append it into the list"""
+
+        if observer not in self._observers:
+            self._observers.append(observer)
+
+    def detach(self, observer):
+
+        """Remove the observer from the observer list"""
+
+        try:
+            self._observers.remove(observer)
+        except ValueError:
+            pass
+
+
+class Data(Subject):
+    """monitor the object"""
+
+    def __init__(self, name=''):
+        Subject.__init__(self)
+        self.name = name
+        self._data = 0
+
+    @property
+    def data(self):
+        return self._data
+
+    @data.setter
+    def data(self, value):
+        self._data = value
+        self.notify()
+
+
+class HexViewer:
+    """updates the Hexviewer"""
+
+    def update(self, subject):
+        print('HexViewer: Subject {} has data 0x{:x}'.format(subject.name, subject.data))
+
+
+class OctalViewer:
+    """updates the Octal viewer"""
+
+    def update(self, subject):
+        print('OctalViewer: Subject' + str(subject.name) + 'has data ' + str(oct(subject.data)))
+
+
+class DecimalViewer:
+    """updates the Decimal viewer"""
+
+    def update(self, subject):
+        print('DecimalViewer: Subject % s has data % d' % (subject.name, subject.data))
+
+
+"""main function"""
+
+if __name__ == "__main__":
+    """provide the data"""
+
+    obj1 = Data('Data 1')
+    obj2 = Data('Data 2')
+
+    view1 = DecimalViewer()
+    view2 = HexViewer()
+    view3 = OctalViewer()
+
+    obj1.attach(view1)
+    obj1.attach(view2)
+    obj1.attach(view3)
+
+    obj2.attach(view1)
+    obj2.attach(view2)
+    obj2.attach(view3)
+
+    obj1.data = 10
+    obj2.data = 15
