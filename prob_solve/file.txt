@@ -251,6 +251,29 @@ KeyError: 'id'
 ------------------------------------------------------
 
 
+======================================================================
+ERROR: test_retrieve_activity (program_activities.tests.tests_views.TestViews)
+Retrieve program activity retrieve API test
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/uzzal/backend/quantibly-v3-backend/program_activities/tests/tests_views.py", line 218, in test_retrieve_activity
+    payload, response_dict = self.create_activity_object()
+TypeError: cannot unpack non-iterable NoneType object
+
+======================================================================
+ERROR: test_update_activity (program_activities.tests.tests_views.TestViews)
+Update activity API test
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/uzzal/backend/quantibly-v3-backend/program_activities/tests/tests_views.py", line 253, in test_update_activity
+    payload, response_dict = self.create_activity_object()
+TypeError: cannot unpack non-iterable NoneType object
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.331s
+
+FAILED (errors=5)
+Destroying test database for alias 'default'...
 
 
 
